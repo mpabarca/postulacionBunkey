@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import AddExercise from './AddExercise';
+import {Row, Col, Container} from 'react-bootstrap';
 
 import {connect} from 'react-redux';
 import {showExercise} from './actions/exercisesActions';
@@ -15,11 +16,13 @@ class App extends Component{
     let actualResult=((exercises.length)===0)?'':(exercises[exercises.length-1].result);
 
     return (
-      <div>
-        <AddExercise />
-        <h6>Resultado</h6>
-        <div>{actualResult}</div>        
-      </div>
+      <Container>
+        <Row><AddExercise/></Row>
+        <Row><h6>Resultado</h6></Row>
+        <Row><div>{actualResult}</div>  </Row>
+        
+            
+      </Container>
         
     )}
 }

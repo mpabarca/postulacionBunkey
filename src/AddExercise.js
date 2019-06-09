@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Row, Col} from 'react-bootstrap';
+import './addExercise.css';
 
 import {connect} from 'react-redux';
 import {addExercises} from './actions/exercisesActions';
@@ -39,17 +41,20 @@ class AddExercise extends Component{
         return(
             <div>
                 <form onSubmit={this.addNewExercise}>
-                    <input placeholder='Num1' type='text' ref={this.num1Ref}/>
-                    <input placeholder='Num2' type='text' ref={this.num2Ref}/>
-                    <select ref={this.operatorRef}>
-                        <option value="">Operación</option>
-                        <option value="add">Sumar</option>
-                        <option value="subtract">Restar</option>
-                        <option value="divide">Dividir</option>
-                        <option value="multiply">Multiplicar</option>
-                    </select>
-                    <button type="submit">Calcular</button>
-                    
+                    <Row className="row-form"><input placeholder='Num1' type='text' ref={this.num1Ref}/></Row>
+                    <Row className="row-form"><input placeholder='Num2' type='text' ref={this.num2Ref}/></Row>
+                    <Row className="row-form">
+                        <Col>
+                            <select id="select" ref={this.operatorRef}>
+                                <option value="">Operación</option>
+                                <option value="add">Sumar</option>
+                                <option value="subtract">Restar</option>
+                                <option value="divide">Dividir</option>
+                                <option value="multiply">Multiplicar</option>
+                            </select>
+                        </Col>
+                        <Col><button type="submit">Calcular</button></Col>
+                    </Row>
                 </form>
             </div>
             
