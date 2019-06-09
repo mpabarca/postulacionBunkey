@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+import {connect} from 'react-redux';
+import {addExercises} from './actions/exercisesActions';
+
 class AddExercise extends Component{
     
    num1Ref=React.createRef();
@@ -54,5 +57,8 @@ class AddExercise extends Component{
     }
 }
 
+const mapStateToProps = state =>({
+    exercises:state.exercises.exercises
+})
 
-export default AddExercise;
+export default connect (mapStateToProps, {addExercises})(AddExercise);
