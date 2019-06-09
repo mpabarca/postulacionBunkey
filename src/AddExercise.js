@@ -13,8 +13,8 @@ class AddExercise extends Component{
 
     addNewExercise=(e)=>{
         e.preventDefault();
-        let num1=parseInt(this.num1Ref.current.value);
-        let num2=parseInt(this.num2Ref.current.value);
+        let num1=parseFloat(this.num1Ref.current.value);
+        let num2=parseFloat(this.num2Ref.current.value);
         let operator= this.operatorRef.current.value;
         let result;
         if (operator==='add'){
