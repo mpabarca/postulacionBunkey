@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import AddExercise from './AddExercise';
-import {Row, Col, Container} from 'react-bootstrap';
+import {Row, Container} from 'react-bootstrap';
 
 import {connect} from 'react-redux';
 import {showExercise} from './actions/exercisesActions';
