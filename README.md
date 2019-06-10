@@ -2,7 +2,7 @@
 
 Web App que realiza cálculos de 2 números con los 4 básicos operadores: suma, resta, división y multiplicación.
 
-Para ingresar a la web app directamente hacer [click aquí][https://mpabarca.github.io/postulacionBunkey/]
+Para ingresar a la web app directamente hacer [click aquí](https://mpabarca.github.io/postulacionBunkey/)
 
 ## Instrucciones de Uso
 
